@@ -23,6 +23,7 @@ namespace WcfContracts.Contracts
         {
             if (_cursor == 0)
             {
+                _cursor++;
                 return Current();
             }
 

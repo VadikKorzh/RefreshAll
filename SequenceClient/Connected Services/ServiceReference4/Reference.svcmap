@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6e4f0eb7-bf98-4e8c-a624-e4e8ef5ebbea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:34458/vocab" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SimpleVocabularyService.wsdl" MetadataType="Wsdl" ID="14c1ea77-afd3-4adf-80f8-475cb49dd0bb" SourceId="1" SourceUrl="http://localhost:34458/vocab?wsdl" />
+    <MetadataFile FileName="vocab.xsd" MetadataType="Schema" ID="561b55a2-5d0c-4d9d-8b7b-65ca25a6b37c" SourceId="1" SourceUrl="http://localhost:34458/vocab?xsd=xsd1" />
+    <MetadataFile FileName="vocab1.xsd" MetadataType="Schema" ID="d8d6b49b-a3d7-4d12-a4ff-bdae0af701a2" SourceId="1" SourceUrl="http://localhost:34458/vocab?xsd=xsd0" />
+    <MetadataFile FileName="vocab.disco" MetadataType="Disco" ID="254dc80b-6c65-4cec-bf81-ee560c6d2f69" SourceId="1" SourceUrl="http://localhost:34458/vocab?disco" />
+    <MetadataFile FileName="vocab.wsdl" MetadataType="Wsdl" ID="a419a7b9-cb65-4381-88f7-2e82d710294d" SourceId="1" SourceUrl="http://localhost:34458/vocab?wsdl=wsdl0" />
+    <MetadataFile FileName="vocab2.xsd" MetadataType="Schema" ID="afbe55a6-5cba-49ef-bf3c-b88f9be5b641" SourceId="1" SourceUrl="http://localhost:34458/vocab?xsd=xsd3" />
+    <MetadataFile FileName="vocab3.xsd" MetadataType="Schema" ID="9825014e-8eed-42df-b806-714abb8ea0c1" SourceId="1" SourceUrl="http://localhost:34458/vocab?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

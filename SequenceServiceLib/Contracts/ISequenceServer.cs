@@ -3,10 +3,10 @@ using System.ServiceModel;
 
 namespace WcfContracts.Contracts
 {
-    [ServiceContract]
+    [ServiceContract(Namespace = "vadikorzh.com.com.com")]
     public interface ISequenceServer
     {
-        [OperationContract]
+        [OperationContract()]
         void Reset();
         [OperationContract]
         Int32 Next();

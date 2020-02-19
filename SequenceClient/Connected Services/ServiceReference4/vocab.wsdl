@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="VocabularyServiceLib.Contracts.IVocabularyService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="VocabularyServiceLib.Contracts.IVocabularyService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="VocabularyServiceLib.Contracts.IVocabularyService/Imports">
+      <xsd:import schemaLocation="http://localhost:34458/vocab?xsd=xsd0" namespace="VocabularyServiceLib.Contracts.IVocabularyService" />
+      <xsd:import schemaLocation="http://localhost:34458/vocab?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:34458/vocab?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VocabularyServiceLib.DataContracts" />
+      <xsd:import schemaLocation="http://localhost:34458/vocab?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVocabularyService_GetWordInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordInfo" />
+  </wsdl:message>
+  <wsdl:message name="IVocabularyService_GetWordInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVocabularyService_AddSynonym_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSynonym" />
+  </wsdl:message>
+  <wsdl:message name="IVocabularyService_AddSynonym_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSynonymResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVocabularyService_AddAntonymAttrName_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAntonymAttrName" />
+  </wsdl:message>
+  <wsdl:message name="IVocabularyService_AddAntonymAttrName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAntonymAttrNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVocabularyService">
+    <wsdl:operation name="GetWordInfo">
+      <wsdl:input wsaw:Action="VocabularyServiceLib.Contracts.IVocabularyService/IVocabularyService/GetWordInfo" message="tns:IVocabularyService_GetWordInfo_InputMessage" />
+      <wsdl:output wsaw:Action="VocabularyServiceLib.Contracts.IVocabularyService/IVocabularyService/GetWordInfoResponse" message="tns:IVocabularyService_GetWordInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSynonym">
+      <wsdl:input wsaw:Action="VocabularyServiceLib.Contracts.IVocabularyService/IVocabularyService/AddSynonym" message="tns:IVocabularyService_AddSynonym_InputMessage" />
+      <wsdl:output wsaw:Action="VocabularyServiceLib.Contracts.IVocabularyService/IVocabularyService/AddSynonymResponse" message="tns:IVocabularyService_AddSynonym_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAntonymAttrName">
+      <wsdl:input wsaw:Action="VocabularyServiceLib.Contracts.IVocabularyService/IVocabularyService/AddAntonymAttrName" message="tns:IVocabularyService_AddAntonymAttrName_InputMessage" />
+      <wsdl:output wsaw:Action="VocabularyServiceLib.Contracts.IVocabularyService/IVocabularyService/AddAntonymAttrNameResponse" message="tns:IVocabularyService_AddAntonymAttrName_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

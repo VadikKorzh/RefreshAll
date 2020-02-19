@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ef6dc9c2-619b-421a-b8d9-481ac9b75885" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:34455/fibonacci" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="fibonacci.xsd" MetadataType="Schema" ID="a8c6ee5b-8b81-4453-b3e7-5fb058fa59bf" SourceId="1" SourceUrl="http://localhost:34455/fibonacci?xsd=xsd0" />
+    <MetadataFile FileName="fibonacci.wsdl" MetadataType="Wsdl" ID="49b58824-391e-4342-bcb3-3f8111100c10" SourceId="1" SourceUrl="http://localhost:34455/fibonacci?wsdl=wsdl0" />
+    <MetadataFile FileName="FibonacciServer.wsdl" MetadataType="Wsdl" ID="e465143f-8f7f-4ba4-bf51-c4d4a80aaa2a" SourceId="1" SourceUrl="http://localhost:34455/fibonacci?wsdl" />
+    <MetadataFile FileName="fibonacci.disco" MetadataType="Disco" ID="2ca2e840-0ba2-45de-a574-05eede9e22d8" SourceId="1" SourceUrl="http://localhost:34455/fibonacci?disco" />
+    <MetadataFile FileName="fibonacci1.xsd" MetadataType="Schema" ID="8a73f969-80ad-471e-a85d-a6e8844325b4" SourceId="1" SourceUrl="http://localhost:34455/fibonacci?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

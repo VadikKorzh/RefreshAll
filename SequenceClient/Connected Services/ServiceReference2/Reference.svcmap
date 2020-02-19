@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6205aa26-ea83-4bb6-ba9a-e0268dcd83d6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:34455/simple" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="simple.xsd" MetadataType="Schema" ID="8ef095bd-c093-49b9-a693-07302c5a318f" SourceId="1" SourceUrl="http://localhost:34455/simple?xsd=xsd0" />
+    <MetadataFile FileName="SimpleServer.wsdl" MetadataType="Wsdl" ID="dd743c02-e55d-4f49-bcff-3e5a509acc90" SourceId="1" SourceUrl="http://localhost:34455/simple?wsdl" />
+    <MetadataFile FileName="simple1.xsd" MetadataType="Schema" ID="36ef90e1-d071-4cc0-800a-daf625cbc59d" SourceId="1" SourceUrl="http://localhost:34455/simple?xsd=xsd1" />
+    <MetadataFile FileName="simple.wsdl" MetadataType="Wsdl" ID="401cec51-161f-4d46-93d9-d26caba64ca4" SourceId="1" SourceUrl="http://localhost:34455/simple?wsdl=wsdl0" />
+    <MetadataFile FileName="simple.disco" MetadataType="Disco" ID="a4946a3d-30b1-43ef-bd05-0d31ee4e2820" SourceId="1" SourceUrl="http://localhost:34455/simple?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="VocabularyServiceLib.Contracts.IVocabularyService" elementFormDefault="qualified" targetNamespace="VocabularyServiceLib.Contracts.IVocabularyService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34458/vocab?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VocabularyServiceLib.DataContracts" />
+  <xs:element name="GetWordInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="word" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWordInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/VocabularyServiceLib.DataContracts" minOccurs="0" name="GetWordInfoResult" nillable="true" type="q1:ThesaurusUnit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSynonym">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseWord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="synonym" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSynonymResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAntonymAttrName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseWord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="antonym" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAntonymAttrNameResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
