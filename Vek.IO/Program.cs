@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 
 namespace Vek.IO
@@ -10,32 +11,129 @@ namespace Vek.IO
     {
         static void Main(string[] args)
         {
+            IOForFun();
+        }
+
+        private static void IOForFun()
+        {
             //GetDriveInfo();
             //DirectoryInfoForFun();
             //DirectoryStaticFun();
             //FileInfoForFun();
             //StreamForFun();
+            //EncodingForFun();
+            //WriterReaderForFun();
+            //StringReaderFun();
+            //BinaryRdrWrtrForFun();
+            FileSytemWatcherForFun();
+        }
 
-            EncodingForFun();
+        private static void FileSytemWatcherForFun()
+        {
+            var dirPath = @"D:\Worker\IO\WatchMePlz";
+            FileSystemWatcher watcher = new FileSystemWatcher(dirPath);
+            watcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite | NotifyFilters.Attributes | NotifyFilters.LastAccess;
+
+            FileSystemEventHandler inform = (s, args) => { Console.WriteLine($"{args.ChangeType} on {args.Name}"); };
+
+            watcher.Created += inform;
+            watcher.Changed += inform;
+            watcher.Disposed += (s, e) => Console.WriteLine("Watcher disposed!!! Wow!");
+            watcher.Renamed += (s, e) => Console.WriteLine(e.OldName);
+                 
+            watcher.IncludeSubdirectories = true;
+            watcher.EnableRaisingEvents = true;
+
+            var newFileName = Path.GetRandomFileName();
+            FileInfo fi = new FileInfo(Path.Combine(dirPath, newFileName));
+            
+            var fstr = fi.Open(FileMode.OpenOrCreate);
+            fstr.Close();
+
+
+            Console.ReadLine();
+            
+        }
+
+        private static void BinaryRdrWrtrForFun()
+        {
+            var buffer = new Byte[23];
+            Int64 longValue = 1L;
+            Byte byteValue = 1;
+            Int32 intValue = 8;
+            Console.WriteLine(longValue);
+            using (var stream = new MemoryStream())
+            {
+                using (var bWrtr = new BinaryWriter(stream))
+                {
+                    bWrtr.Seek(3, SeekOrigin.Begin);
+                    bWrtr.Write(intValue);
+                    stream.Position = 0;
+                    using (var bRdr = new BinaryReader(stream))
+                    {
+                        Console.WriteLine(bRdr.ReadInt32());
+                        
+                    }
+                }
+            }
+        }
+
+        private static void StringReaderFun()
+        {
+            String result;
+            using (var wrtr = new StringWriter())
+            {
+                wrtr.WriteLine("Tanya otkroy mnie dveri");
+                result = wrtr.GetStringBuilder().AppendJoin(null, 213, 123, "sdfsdf").ToString();
+            }
+            Console.WriteLine(result);
+        }
+
+        private static void WriterReaderForFun()
+        {
+            using (var str = File.Open(@"D:\Worker\IO\DirectoryInfo\data.txt", FileMode.OpenOrCreate))
+            using (var wrtr = new StreamWriter(str, Encoding.ASCII, bufferSize: 1000))
+            {
+                wrtr.Write(false);
+                wrtr.WriteLine();
+                wrtr.WriteLine(long.MaxValue);
+            }
+
+            var buffer = new Char[49];
+            using (var rdr = File.OpenText(@"D:\Worker\IO\DirectoryInfo\data.txt"))
+            {
+                while (!rdr.EndOfStream)
+                {
+                    rdr.ReadBlock(buffer, 0, 10);
+                    foreach (var ch in buffer)
+                    {
+                        //if (Char.IsLetterOrDigit(ch))
+                        {
+                            Console.Write(ch);
+                        }
+                    }
+                    Console.WriteLine();
+                }
+            }
         }
 
         private static void StreamForFun()
         {
-            using (var fStr = File.Open(@"D:\Worker\IO\DirectoryInfo\data.txt", FileMode.OpenOrCreate))
+            using (var str = File.Open(@"D:\Worker\IO\DirectoryInfo\data.txt", FileMode.OpenOrCreate))
             {
                 String text = "Team explorer home";
                 var bytes = Encoding.ASCII.GetBytes(text);
-                fStr.Write(bytes, 0, bytes.Length);
+                str.Write(bytes, 0, bytes.Length);
 
-                fStr.Position = 0;
+                str.Position = 0;
 
                 List<Byte> bytesOut = new List<byte>();
                 for (int i = 0; i < bytes.Length; i++)
                 {
-                    bytesOut.Add((Byte)fStr.ReadByte());
+                    bytesOut.Add((Byte)str.ReadByte());
                 }
 
-                Console.WriteLine(Encoding.UTF32.GetString(bytesOut.ToArray()));
+                Console.WriteLine(Encoding.UTF8.GetString(bytesOut.ToArray()));
             }
         }
 
